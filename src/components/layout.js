@@ -34,7 +34,7 @@ const Layout = ({ children }) => {
           paddingTop: 0,
         }}
       >
-        <ThemeToggler>
+        {/* <ThemeToggler>
           {({ theme, toggleTheme }) => (
             <label>
               <input
@@ -45,7 +45,7 @@ const Layout = ({ children }) => {
               Dark mode
             </label>
           )}
-        </ThemeToggler>
+        </ThemeToggler> */}
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with

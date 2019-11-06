@@ -1,8 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
-
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import PostLink from "../components/post-link"
 import styles from "./index.module.css"
@@ -18,9 +15,18 @@ const IndexPage = ({
   return (
     <Layout>
       <SEO title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site with github actions second deploy.</p>
       {/* <Link to="/page-2/">Go to page 2</Link> */}
+      <div
+        style={{
+          textAlign: "right",
+          borderRight: "4px solid #f53b57",
+          padding: "10px",
+          fontSize: "30px",
+          marginBottom: "20px",
+        }}
+      >
+        <span style={{ marginRight: "5px" }}>Posts</span>
+      </div>
       <div className={styles.gridContainer}>{Posts}</div>
     </Layout>
   )
