@@ -5,6 +5,8 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import PostLink from "../components/post-link"
+import styles from "./index.module.css"
+
 const IndexPage = ({
   data: {
     allMarkdownRemark: { edges },
@@ -23,7 +25,7 @@ const IndexPage = ({
         <Image />
       </div>
       <Link to="/page-2/">Go to page 2</Link>
-      <div>Posts: {Posts}</div>
+      <div className={styles.gridContainer}>{Posts}</div>
     </Layout>
   )
 }
