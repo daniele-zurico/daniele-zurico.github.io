@@ -5,14 +5,13 @@ import {
   faTwitter,
   faGooglePlus,
 } from "@fortawesome/free-brands-svg-icons"
-const Social = () => {
-  return (
-    <div style={{ marginTop: "15px" }}>
-      <FontAwesomeIcon icon={faFacebook} style={{ marginRight: "10px" }} />
-      <FontAwesomeIcon icon={faTwitter} style={{ marginRight: "10px" }} />
-      <FontAwesomeIcon icon={faGooglePlus} />
-    </div>
-  )
-}
+import styles from "./social.module.css"
+const Social = () => (
+  <div className={styles.container}>
+    <FontAwesomeIcon icon={faFacebook} className={styles.icon} />
+    <FontAwesomeIcon icon={faTwitter} className={styles.icon} />
+    <FontAwesomeIcon icon={faGooglePlus} className={styles.icon} />
+  </div>
+)
 
 export default Social
