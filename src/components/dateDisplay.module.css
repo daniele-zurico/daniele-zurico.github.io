@@ -1,15 +1,4 @@
 .container {
-  position: relative;
-}
-.info {
-  background: #172027;
-  position: relative;
-  margin-top: -12%;
-  padding: 50px 20px 20px;
-  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
-  cursor: pointer;
-}
-.dateContainer {
   position: absolute;
   z-index: 90;
   left: 15px;
@@ -36,6 +25,17 @@
   border-right: 30px solid transparent;
   border-top: 12px solid #3b3b3b;
 }
-.link {
-  font-size: 22px;
+.day {
+  display: block;
+}
+.month {
+  display: block;
+  color: #f53b57;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: normal;
+  margin: 2px 0;
+}
+.year {
+  display: block;
 }

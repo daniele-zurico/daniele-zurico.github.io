@@ -6,59 +6,17 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import Header from "./header"
-import "./layout.css"
-
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
-  return (
-    <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1124,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        {/* <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            <label>
-              <input
-                type="checkbox"
-                onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-                checked={theme === "dark"}
-              />
-              Dark mode
-            </label>
-          )}
-        </ThemeToggler> */}
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
-    </>
-  )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+const Layout = ({ children, site: { title } }) => (
+  <>
+    <Header title={title} />
+    <main>{children}</main>
+    <footer>
+      © {new Date().getFullYear()}, Built by
+      {` `}
+      <a href="https://www.gatsbyjs.org">Daniele Zurico</a>
+    </footer>
+  </>
+)
 
 export default Layout
