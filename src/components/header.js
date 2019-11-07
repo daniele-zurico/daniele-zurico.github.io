@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import React from "react"
 import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
-const Header = ({ title }) => (
-  <header>
+const Header = ({ title, featuredImage = true }) => (
+  <header className={!featuredImage ? styles.noFeaturedImage : null}>
     <div className={styles.fixedHeader}>
       <Link to="/" className={styles.link}>
         Blog
@@ -16,7 +16,7 @@ const Header = ({ title }) => (
         Contacts
       </Link>
     </div>
-    <FeaturedImage className={styles.image} />
+    {featuredImage && <FeaturedImage className={styles.image} />}
 
     {/* <ThemeToggler>
           {({ theme, toggleTheme }) => (

@@ -12,6 +12,9 @@
   border-bottom: 1px solid #595959;
   margin-bottom: 1.45rem;
 }
+.noFeaturedImage {
+  padding: 40px;
+}
 .image {
   background-size: cover;
   background-repeat: no-repeat;
