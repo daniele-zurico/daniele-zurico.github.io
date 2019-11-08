@@ -2,6 +2,8 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  font-family: "Nunito Sans", serif;
+  font-size: 18px;
 }
 @media only screen and (max-width: 480px) {
   html {

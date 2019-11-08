@@ -7,6 +7,7 @@
 
 import React from "react"
 import Header from "./header"
+import "typeface-nunito-sans"
 const Layout = ({ children, site: { title }, featuredImage }) => (
   <>
     <Header title={title} featuredImage={featuredImage} />
