@@ -12,6 +12,7 @@ html {
 body {
   --bg: white;
   --textNormal: #222;
+  --borderBoxColor: white;
   background-color: var(--bg);
   color: var(--textNormal);
   margin: 0;
@@ -20,6 +21,7 @@ body {
 body.dark {
   -webkit-font-smoothing: antialiased;
   --bg: #1e272e;
+  --borderBoxColor: #172027;
   --textNormal: rgba(255, 255, 255, 0.88);
 }
 

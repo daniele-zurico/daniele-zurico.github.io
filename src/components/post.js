@@ -18,7 +18,7 @@ const Post = ({
 }) => (
   <Link to={path} className={styles.container}>
     <DateDisplay date={date} />
-    <Img fluid={fluid} />
+    <Img fluid={fluid} style={{ minHeight: "200px" }} />
     <div className={styles.info}>
       <div className={styles.titleContainer}>
         <span className={styles.title}>{title}</span>

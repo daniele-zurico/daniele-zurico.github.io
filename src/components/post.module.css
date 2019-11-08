@@ -3,12 +3,13 @@
 }
 
 .info {
-  background: #172027;
+  background: var(--borderBoxColor);
   position: relative;
   margin-top: -12%;
   padding: 50px 20px 20px;
   clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
   cursor: pointer;
+  width: 89%;
 }
 
 .title {

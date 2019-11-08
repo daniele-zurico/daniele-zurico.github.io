@@ -11,6 +11,9 @@
   background: rgba(30, 39, 46, 0.7);
   border-bottom: 1px solid #595959;
   margin-bottom: 1.45rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .noFeaturedImage {
   padding: 40px;
