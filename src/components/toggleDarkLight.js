@@ -1,7 +1,6 @@
 import React from "react"
 import styles from "./toggleDarkLight.module.css"
 const ToggleDarkLight = ({ onChange, checked }) => {
-  console.log("checked: ", checked)
   return (
     <div className={styles.switch}>
       <input
