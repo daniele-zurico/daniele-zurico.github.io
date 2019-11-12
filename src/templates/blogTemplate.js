@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
-import { Layout, SEO, SectionTitle } from "../components"
+import { SEO, SectionTitle } from "../components"
 import { useSite } from "../hooks/useSite"
 import styles from "./blogTemplate.module.css"
 export default function Template({
@@ -13,7 +13,7 @@ export default function Template({
   let post = data.markdownRemark
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
-    <Layout site={site} featuredImage={false}>
+    <>
       <SEO title="About me" site={site} />
       <SectionTitle title={frontmatter.title} />
       <div className={styles.container}>
@@ -23,7 +23,7 @@ export default function Template({
           <div dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
-    </Layout>
+    </>
   )
 }
 export const pageQuery = graphql`

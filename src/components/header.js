@@ -7,6 +7,8 @@ import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
 
 const Header = ({ location }) => {
+  let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
+
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
     if (!theme) {
@@ -16,49 +18,33 @@ const Header = ({ location }) => {
     }
   }, [])
 
-  let [el, setEl] = React.useState({ offsetWidth: 38, offsetLeft: 40 })
+  // position the active element on page load
+  const measuredRef = React.useCallback(node => {
+    if (node !== null && node.attributes["href"].value === location) {
+      const { offsetWidth, offsetLeft } = node
+      setEl({ offsetWidth, offsetLeft })
+    }
+  }, [])
+
   const props = useSpring({
     width: el.offsetWidth,
     left: el.offsetLeft,
   })
+
   const animateActiveLink = evt => {
     setEl({
       offsetWidth: evt.currentTarget.offsetWidth,
       offsetLeft: evt.currentTarget.offsetLeft,
     })
   }
-  const blogRef = React.useRef()
-  const aboutRef = React.useRef()
-  const contactRef = React.useRef()
-  React.useEffect(() => {
-    switch (location) {
-      case "/aboutMe":
-        setEl({
-          offsetWidth: aboutRef.current.offsetWidth,
-          offsetLeft: aboutRef.current.offsetLeft + 5,
-        })
-        break
-      case "/contacts":
-        setEl({
-          offsetWidth: contactRef.current.offsetWidth,
-          offsetLeft: contactRef.current.offsetLeft + 10,
-        })
-        break
-      default:
-        setEl({
-          offsetWidth: blogRef.current.offsetWidth,
-          offsetLeft: blogRef.current.offsetLeft,
-        })
-        break
-    }
-  }, [])
+
   return (
     <header>
       <div className={styles.fixedHeader}>
         <div className={styles.linkContainer}>
           <animated.div style={props} className={styles.slider} />
           <Link
-            ref={blogRef}
+            ref={measuredRef}
             to="/"
             className={styles.link}
             onClick={animateActiveLink}
@@ -66,7 +52,7 @@ const Header = ({ location }) => {
             <span>Blog</span>
           </Link>
           <Link
-            ref={aboutRef}
+            ref={measuredRef}
             to="/aboutMe"
             className={styles.link}
             onClick={animateActiveLink}
@@ -74,7 +60,7 @@ const Header = ({ location }) => {
             <span>About Me</span>
           </Link>
           <Link
-            ref={contactRef}
+            ref={measuredRef}
             to="/contacts"
             className={styles.link}
             onClick={animateActiveLink}
@@ -82,6 +68,8 @@ const Header = ({ location }) => {
             <span>Contacts</span>
           </Link>
         </div>
+        <div>{el.offsetWidth}</div>
+        <div>{el.offsetLeft}</div>
 
         <div style={{ marginRight: "48px" }}>
           <ThemeToggler theme="light">
