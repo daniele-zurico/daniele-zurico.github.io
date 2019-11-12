@@ -68,8 +68,6 @@ const Header = ({ location }) => {
             <span>Contacts</span>
           </Link>
         </div>
-        <div>{el.offsetWidth}</div>
-        <div>{el.offsetLeft}</div>
 
         <div style={{ marginRight: "48px" }}>
           <ThemeToggler theme="light">
