@@ -16,7 +16,7 @@ const Header = ({ title, featuredImage = true }) => {
     }
   }, [])
 
-  let [el, setEl] = React.useState({ offsetWidth: "", offsetLeft: "" })
+  let [el, setEl] = React.useState({ offsetWidth: 38, offsetLeft: 40 })
   const props = useSpring({
     width: el.offsetWidth,
     left: el.offsetLeft,
@@ -25,8 +25,6 @@ const Header = ({ title, featuredImage = true }) => {
     setEl({
       offsetWidth: evt.currentTarget.offsetWidth,
       offsetLeft: evt.currentTarget.offsetLeft,
-      transition: "all 0.3s ease",
-      position: "absolute",
     })
   }
   return (
