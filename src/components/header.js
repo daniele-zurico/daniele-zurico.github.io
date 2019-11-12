@@ -14,7 +14,7 @@ const Header = ({ location }) => {
     if (!theme) {
       new Date().getTime() > 14
         ? localStorage.setItem("theme", "night")
-        : localStorage.setItem("theme", "night")
+        : localStorage.setItem("theme", "day")
     }
   }, [])
 
