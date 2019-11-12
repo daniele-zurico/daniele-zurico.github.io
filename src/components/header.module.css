@@ -39,3 +39,16 @@
     margin: 0 11px;
   }
 }
+.linkContainer {
+  display: flex;
+}
+.slider {
+  border-bottom: 3px solid #f53b57;
+  margin-top: 25px;
+  border-radius: 3px;
+  position: absolute;
+}
+.animate {
+  transition: all 0.3s ease;
+  position: absolute;
+}
