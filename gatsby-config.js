@@ -57,12 +57,12 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: "gatsby-plugin-layout",
-      options: {
-        component: require.resolve(`./src/components/layout.js`),
-      },
-    },
+    // {
+    //   resolve: "gatsby-plugin-layout",
+    //   options: {
+    //     component: require.resolve(`./src/components/layout.js`),
+    //   },
+    // },
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-offline",
   ],

@@ -9,7 +9,7 @@ const ToggleDarkLight = ({ onChange, checked }) => {
         onChange={onChange}
         checked={checked}
       />
-      <label for="toggle">
+      <label htmlFor="toggle">
         <i className={styles.bulb}>
           <span className={styles.bulbCenter}></span>
           <span className={styles.filament1}></span>
