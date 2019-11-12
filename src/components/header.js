@@ -6,7 +6,7 @@ import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
 
-const Header = ({ title, featuredImage = true }) => {
+const Header = ({ location }) => {
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
     if (!theme) {
@@ -27,23 +27,55 @@ const Header = ({ title, featuredImage = true }) => {
       offsetLeft: evt.currentTarget.offsetLeft,
     })
   }
+  const blogRef = React.useRef()
+  const aboutRef = React.useRef()
+  const contactRef = React.useRef()
+  React.useEffect(() => {
+    switch (location) {
+      case "/aboutMe":
+        setEl({
+          offsetWidth: aboutRef.current.offsetWidth,
+          offsetLeft: aboutRef.current.offsetLeft + 5,
+        })
+        break
+      case "/contacts":
+        setEl({
+          offsetWidth: contactRef.current.offsetWidth,
+          offsetLeft: contactRef.current.offsetLeft + 10,
+        })
+        break
+      default:
+        setEl({
+          offsetWidth: blogRef.current.offsetWidth,
+          offsetLeft: blogRef.current.offsetLeft,
+        })
+        break
+    }
+  }, [])
   return (
-    <header className={!featuredImage ? styles.noFeaturedImage : null}>
+    <header>
       <div className={styles.fixedHeader}>
         <div className={styles.linkContainer}>
           <animated.div style={props} className={styles.slider} />
-          <Link to="/" className={styles.link} onClick={animateActiveLink}>
+          <Link
+            ref={blogRef}
+            to="/"
+            className={styles.link}
+            onClick={animateActiveLink}
+          >
             <span>Blog</span>
           </Link>
           <Link
-            to="aboutMe"
+            ref={aboutRef}
+            to="/aboutMe"
             className={styles.link}
             onClick={animateActiveLink}
           >
             <span>About Me</span>
           </Link>
           <Link
-            to="contacts"
+            ref={contactRef}
+            to="/contacts"
             className={styles.link}
             onClick={animateActiveLink}
           >
@@ -67,7 +99,7 @@ const Header = ({ title, featuredImage = true }) => {
         </div>
       </div>
 
-      {featuredImage && <FeaturedImage className={styles.image} />}
+      <FeaturedImage className={styles.image} />
     </header>
   )
 }

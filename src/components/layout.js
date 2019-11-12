@@ -8,9 +8,9 @@
 import React from "react"
 import Header from "./header"
 import "typeface-nunito-sans"
-const Layout = ({ children, featuredImage }) => (
+const Layout = ({ children, uri }) => (
   <>
-    <Header title="ciao" featuredImage={featuredImage} />
+    <Header location={uri} />
     <main>{children}</main>
     <footer>
       © {new Date().getFullYear()}, Built by

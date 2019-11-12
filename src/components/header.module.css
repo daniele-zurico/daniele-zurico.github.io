@@ -50,7 +50,3 @@
   width: 38px;
   left: 40px;
 }
-.animate {
-  transition: all 0.3s ease;
-  position: absolute;
-}

@@ -1,5 +1,5 @@
 import React from "react"
-import { Layout, SEO } from "../components"
+import { SEO } from "../components"
 import { useSite } from "../hooks/useSite"
 const Contacts = () => {
   const site = useSite()
