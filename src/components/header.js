@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-
+import { useSpring, animated } from "react-spring"
 import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
@@ -16,22 +16,24 @@ const Header = ({ title, featuredImage = true }) => {
     }
   }, [])
 
-  let currentRef = React.useRef(null)
-
+  let [el, setEl] = React.useState({ offsetWidth: "", offsetLeft: "" })
+  const props = useSpring({
+    width: el.offsetWidth,
+    left: el.offsetLeft,
+  })
   const animateActiveLink = evt => {
-    currentRef.current = evt.currentTarget
+    setEl({
+      offsetWidth: evt.currentTarget.offsetWidth,
+      offsetLeft: evt.currentTarget.offsetLeft,
+      transition: "all 0.3s ease",
+      position: "absolute",
+    })
   }
   return (
     <header className={!featuredImage ? styles.noFeaturedImage : null}>
       <div className={styles.fixedHeader}>
         <div className={styles.linkContainer}>
-          <div
-            className={[styles.slider].join(" ")}
-            style={{
-              width: currentRef.current ? currentRef.current.offsetWidth : 38,
-              left: currentRef.current ? currentRef.current.offsetLeft : 40,
-            }}
-          />
+          <animated.div style={props} className={styles.slider} />
           <Link to="/" className={styles.link} onClick={animateActiveLink}>
             <span>Blog</span>
           </Link>

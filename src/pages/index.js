@@ -7,10 +7,11 @@ import "./theme.css"
 const IndexPage = () => {
   const site = useSite()
   return (
-    <Layout site={site}>
+    <>
+      {/* <Layout site={site} /> */}
       <SEO title="Home" site={site} />
       <Posts />
-    </Layout>
+    </>
   )
 }
 
