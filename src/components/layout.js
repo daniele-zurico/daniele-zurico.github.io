@@ -8,6 +8,7 @@
 import React from "react"
 import Header from "./header"
 import "typeface-nunito-sans"
+import "./layout.css"
 const Layout = ({ children, uri }) => (
   <>
     <Header location={uri} />
