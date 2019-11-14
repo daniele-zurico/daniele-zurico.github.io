@@ -20,11 +20,12 @@ const Header = ({ location }) => {
 
   // position the active element on page load
   const measuredRef = React.useCallback(node => {
-    console.log("Im calling measuredRef")
-    if (node !== null && node.attributes["href"].value === location) {
-      const { offsetWidth, offsetLeft } = node
-      setEl({ offsetWidth, offsetLeft })
-    }
+    setTimeout(() => {
+      if (node !== null && node.attributes["href"].value === location) {
+        const { offsetWidth, offsetLeft } = node
+        setEl({ offsetWidth, offsetLeft })
+      }
+    }, 200)
   }, [])
 
   const props = useSpring({

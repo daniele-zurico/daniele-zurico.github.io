@@ -4,6 +4,7 @@ html {
   font-family: "Nunito Sans", fantasy;
   font-size: 18px;
 }
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
