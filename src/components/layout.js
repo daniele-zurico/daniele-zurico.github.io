@@ -15,7 +15,7 @@ const Layout = ({ children, uri }) => (
     <main>{children}</main>
     <footer>
       <svg
-        class="footer-svg"
+        className="footer-svg"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 100 25"
         preserveAspectRatio="none"

@@ -18,24 +18,26 @@ const Post = ({
     },
   },
 }) => (
-  <Link to={path} className={styles.container}>
-    <div className={styles.post}>
-      <DateDisplay date={date} />
-      <Img fluid={fluid} style={{ minHeight: "200px" }} />
-      <div className={styles.info}>
-        <div className={styles.titleContainer}>
-          <span className={styles.title}>{title}</span>
-        </div>
-        <div className={styles.footer}>
-          <Social />
-          <div>
-            <span className={styles.text}>Read more</span>
-            <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
+  <div>
+    <Link to={path} className={styles.container}>
+      <div className={styles.post}>
+        <DateDisplay date={date} />
+        <Img fluid={fluid} />
+        <div className={styles.info}>
+          <div className={styles.titleContainer}>
+            <span className={styles.title}>{title}</span>
+          </div>
+          <div className={styles.footer}>
+            <Social />
+            <div>
+              <span className={styles.text}>Read more</span>
+              <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </Link>
+    </Link>
+  </div>
 )
 
 export default Post

@@ -2,7 +2,7 @@
   position: relative;
 }
 .post:hover {
-  box-shadow: 5px 6px 20px #090c0f;
+  box-shadow: 5px 6px 20px var(--boxShadow);
 }
 .post:hover .text {
   opacity: 1;
@@ -36,9 +36,8 @@
   position: relative;
   margin-top: -12%;
   padding: 50px 20px 20px;
-  clip-path: polygon(0 30px, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(-1% 30px, 101% 0px, 101% 101%, 0 101%);
   cursor: pointer;
-  width: 89%;
 }
 
 .title {

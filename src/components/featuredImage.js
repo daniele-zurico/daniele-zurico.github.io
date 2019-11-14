@@ -30,6 +30,7 @@ const FeaturedImage = ({ className }) => {
     <Img
       fluid={data.placeholderImage.childImageSharp.fluid}
       className={className}
+      style={{ height: "465px" }}
     />
   )
 }

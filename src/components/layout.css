@@ -15,6 +15,7 @@ body {
   --bg: white;
   --textNormal: #222;
   --borderBoxColor: white;
+  --boxShadow: #dbdbdb;
   background-color: var(--bg);
   color: var(--textNormal);
   margin: 0;
@@ -25,6 +26,7 @@ body.dark {
   --bg: #1e272e;
   --borderBoxColor: #172027;
   --textNormal: rgba(255, 255, 255, 0.88);
+  --boxShadow: #090c0f;
 }
 
 header {
