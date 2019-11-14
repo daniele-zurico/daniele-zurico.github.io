@@ -14,9 +14,20 @@ const Layout = ({ children, uri }) => (
     <Header location={uri} />
     <main>{children}</main>
     <footer>
-      © {new Date().getFullYear()}, Built by
-      {` `}
-      <a href="https://www.gatsbyjs.org">Daniele Zurico</a>
+      <svg
+        class="footer-svg"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 100 25"
+        preserveAspectRatio="none"
+      >
+        <path
+          d="M0,25 L0,12 L12,0 L75,21 L90,18 L100,24 L100,25 Z"
+          fill="#000000"
+        ></path>
+      </svg>
+      <div className="copyright">
+        <div>© {new Date().getFullYear()}, Built by Daniele Zurico</div>
+      </div>
     </footer>
   </>
 )

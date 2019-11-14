@@ -1,6 +1,35 @@
 .container {
   position: relative;
 }
+.post:hover {
+  box-shadow: 5px 6px 20px #090c0f;
+}
+.post:hover .text {
+  opacity: 1;
+  text-decoration: underline;
+}
+.post:hover .icon {
+  opacity: 1;
+}
+
+.footer {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.text {
+  color: #f53b57;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
+.icon {
+  margin-left: 10px;
+  width: 15px;
+  height: 15px;
+  color: #f53b57;
+  opacity: 0.5;
+  transition: opacity 0.3s;
+}
 
 .info {
   background: var(--borderBoxColor);

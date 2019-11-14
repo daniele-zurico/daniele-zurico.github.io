@@ -8,3 +8,6 @@
   width: 15px;
   height: 15px;
 }
+.icon:hover {
+  color: #f53b57;
+}
