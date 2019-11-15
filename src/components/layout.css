@@ -31,7 +31,6 @@ body.dark {
 
 header {
   position: relative;
-  z-index: 1;
   padding: 265px 0 200px;
   overflow: hidden;
   color: #fff;
