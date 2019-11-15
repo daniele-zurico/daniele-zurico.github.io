@@ -16,10 +16,14 @@ const Header = ({ location }) => {
   const changePosition =
     imageRef.current && imageRef.current.imageRef.current.height
 
-  useScrollPosition(({ currPos }) => {
-    const posY = -currPos.y
-    posY < changePosition - 30 ? setDarkHeader(false) : setDarkHeader(true)
-  })
+  useScrollPosition(
+    ({ currPos }) => {
+      ;-currPos.y - currPos.y < changePosition - 30
+        ? setDarkHeader(false)
+        : setDarkHeader(true)
+    },
+    [darkHeader]
+  )
 
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
