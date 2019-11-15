@@ -5,23 +5,21 @@ import { useSpring, animated } from "react-spring"
 import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
-import useWindowScrollPosition from "@rehooks/window-scroll-position"
+import { useScrollPosition } from "@n8tb1t/use-scroll-position"
+
 const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
 
   const [darkHeader, setDarkHeader] = React.useState(false)
   const imageRef = React.useRef()
-  let position = useWindowScrollPosition()
+
   const changePosition =
     imageRef.current && imageRef.current.imageRef.current.height
 
-  if (position.y > changePosition && !darkHeader) {
-    setDarkHeader(true)
-  }
-
-  if (position.y <= changePosition && darkHeader) {
-    setDarkHeader(false)
-  }
+  useScrollPosition(({ currPos }) => {
+    const posY = -currPos.y
+    posY < changePosition - 30 ? setDarkHeader(false) : setDarkHeader(true)
+  })
 
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
