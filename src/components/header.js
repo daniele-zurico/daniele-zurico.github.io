@@ -11,7 +11,7 @@ const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
 
   const [darkHeader, setDarkHeader] = React.useState(false)
-  const imageRef = React.useRef()
+  //const imageRef = React.useRef()
 
   const changePosition = 465
 
@@ -110,7 +110,7 @@ const Header = ({ location }) => {
         </div>
       </div>
 
-      <FeaturedImage className={styles.image} imgRef={imageRef} />
+      <FeaturedImage className={styles.image} />
     </header>
   )
 }
