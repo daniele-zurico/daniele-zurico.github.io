@@ -1,11 +1,15 @@
-.container {
-  /* text-align: right;
+.sectionContainer {
   border-right: 4px solid #f53b57;
   padding: 10px;
   font-size: 30px;
-  margin: 20px 0; */
+  margin: 20px 0;
+  height: 69px;
+  max-width: 1124px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
-.title {
-  /* margin-right: 5px;
-  font-size: 43px; */
+.sectionTitle {
+  margin-right: 5px;
+  font-size: 43px;
 }
