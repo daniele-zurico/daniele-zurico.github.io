@@ -9,9 +9,10 @@ import React from "react"
 import Header from "./header"
 import "typeface-nunito-sans"
 import "./layout.css"
+
 const Layout = ({ children, uri }) => {
   return (
-    <>
+    <div>
       <Header location={uri} />
       <main>{children}</main>
       <footer>
@@ -30,7 +31,7 @@ const Layout = ({ children, uri }) => {
           <div>© {new Date().getFullYear()}, Built by Daniele Zurico</div>
         </div>
       </footer>
-    </>
+    </div>
   )
 }
 

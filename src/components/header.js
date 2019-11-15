@@ -5,9 +5,22 @@ import { useSpring, animated } from "react-spring"
 import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
-
+import useWindowScrollPosition from "@rehooks/window-scroll-position"
 const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
+  const [darkHeader, setDarkHeader] = React.useState(false)
+  const imageRef = React.useRef()
+  let position = useWindowScrollPosition()
+  const changePosition =
+    imageRef.current && imageRef.current.imageRef.current.height
+
+  if (position.y > changePosition && !darkHeader) {
+    setDarkHeader(true)
+  }
+
+  if (position.y <= changePosition && darkHeader) {
+    setDarkHeader(false)
+  }
 
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
@@ -45,7 +58,12 @@ const Header = ({ location }) => {
 
   return (
     <header>
-      <div className={styles.fixedHeader}>
+      <div
+        className={styles.fixedHeader}
+        style={{
+          backgroundColor: darkHeader ? "#1e272d" : "rgba(30, 39, 46, 0.7)",
+        }}
+      >
         <div className={styles.linkContainer}>
           <animated.div style={props} className={styles.slider} />
           <Link
@@ -90,7 +108,7 @@ const Header = ({ location }) => {
         </div>
       </div>
 
-      <FeaturedImage className={styles.image} />
+      <FeaturedImage className={styles.image} imgRef={imageRef} />
     </header>
   )
 }
