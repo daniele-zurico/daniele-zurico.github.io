@@ -13,8 +13,7 @@ const Header = ({ location }) => {
   const [darkHeader, setDarkHeader] = React.useState(false)
   const imageRef = React.useRef()
 
-  const changePosition =
-    imageRef.current && imageRef.current.imageRef.current.height
+  const changePosition = 465
 
   useScrollPosition(
     ({ currPos }) => {
