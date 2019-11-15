@@ -8,6 +8,7 @@ import ToggleDarkLight from "./toggleDarkLight"
 import useWindowScrollPosition from "@rehooks/window-scroll-position"
 const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
+
   const [darkHeader, setDarkHeader] = React.useState(false)
   const imageRef = React.useRef()
   let position = useWindowScrollPosition()
