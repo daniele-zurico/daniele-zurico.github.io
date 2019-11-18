@@ -18,13 +18,14 @@ const Posts = () => {
   return (
     <>
       <SectionTitle title="Posts" />
-      <Masonry
+      <div
+        className={styles.container}
         breakpointCols={breakpointColumnsObj}
         className={styles.myMasonryGrid}
         columnClassName={styles.myMasonryGrid_column}
       >
         {postList}
-      </Masonry>
+      </div>
     </>
   )
 }
