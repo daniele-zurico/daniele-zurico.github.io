@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import { useSpring, animated } from "react-spring"
+// import { useSpring, animated } from "react-spring"
 import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
@@ -51,10 +51,10 @@ const Header = ({ location }) => {
     [location]
   )
 
-  const props = useSpring({
-    width: el.offsetWidth,
-    left: el.offsetLeft,
-  })
+  // const props = useSpring({
+  //   width: el.offsetWidth,
+  //   left: el.offsetLeft,
+  // })
 
   const animateActiveLink = evt => {
     setEl({
@@ -72,7 +72,7 @@ const Header = ({ location }) => {
         }}
       >
         <div className={styles.linkContainer}>
-          <animated.div style={props} className={styles.slider} />
+          {/* <animated.div style={props} className={styles.slider} /> */}
           <Link
             ref={measuredRef}
             to="/"

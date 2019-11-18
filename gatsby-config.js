@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/daniele-zurico.github.io",
   siteMetadata: {
     title: `Share your Knowledge`,
     description: `My personal blog where I share tutorial and stuff I found interesting about Javascript`,
@@ -64,6 +65,6 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-dark-mode",
-    "gatsby-plugin-offline",
+    //"gatsby-plugin-offline",
   ],
 }
