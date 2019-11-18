@@ -112,7 +112,6 @@ const Header = ({ location }) => {
               )
             }}
           </ThemeToggler>
-          v1
         </div>
       </div>
 
