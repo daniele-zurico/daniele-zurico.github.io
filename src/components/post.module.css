@@ -19,7 +19,7 @@
 }
 .text {
   color: #f53b57;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.3s;
 }
 .icon {
@@ -27,7 +27,7 @@
   width: 15px;
   height: 15px;
   color: #f53b57;
-  opacity: 0.5;
+  opacity: 0.7;
   transition: opacity 0.3s;
 }
 
