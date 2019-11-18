@@ -1,8 +1,7 @@
-.container {
+.sectionContainer {
   text-align: right;
   border-right: 4px solid #f53b57;
-  padding: 10px;
-  font-size: 30px;
-  margin: 20px 0;
-  height: 55px;
+  padding: 20px;
+  margin: 10px 0;
+  font-size: 32px;
 }

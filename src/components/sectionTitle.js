@@ -1,7 +1,7 @@
 import React from "react"
 import styles from "./sectionTitle.module.css"
 const SectionTitle = ({ title }) => (
-  <div className={styles.container}>
+  <div className={styles.sectionContainer}>
     <span>{title}</span>
   </div>
 )
