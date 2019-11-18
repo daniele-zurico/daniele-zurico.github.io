@@ -11,18 +11,23 @@ const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
 
   const [darkHeader, setDarkHeader] = React.useState(false)
-  //const imageRef = React.useRef()
+  const imageRef = React.useRef()
 
   const changePosition = 465
 
-  // useScrollPosition(
-  //   ({ currPos }) => {
-  //     ;-currPos.y - currPos.y < changePosition - 30
-  //       ? setDarkHeader(false)
-  //       : setDarkHeader(true)
-  //   },
-  //   [darkHeader]
-  // )
+  const changePosition2 = imageRef.current
+    ? imageRef.current.imageRef.current.height
+    : 300
+  console.log(changePosition2)
+
+  useScrollPosition(
+    ({ currPos }) => {
+      ;-currPos.y - currPos.y < changePosition - 30
+        ? setDarkHeader(false)
+        : setDarkHeader(true)
+    },
+    [darkHeader]
+  )
 
   React.useEffect(() => {
     const theme = localStorage.getItem("theme")
@@ -107,10 +112,11 @@ const Header = ({ location }) => {
               )
             }}
           </ThemeToggler>
+          v1
         </div>
       </div>
 
-      <FeaturedImage className={styles.image} />
+      <FeaturedImage className={styles.image} imageRef={imageRef} />
     </header>
   )
 }
