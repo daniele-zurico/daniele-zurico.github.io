@@ -27,15 +27,18 @@ const AboutMe = () => {
           I've over 10 years experience across all spheres of web-application
           development: analysis, design, coding and testing using both proven
           technologies and frontier technologies. An intensely inquisitive mind,
-          resolute, versatile, computer science and programming enthusiast, I
-          love writing in multiple coding languages. Experience with building
-          high traffic and reliable websites, CMS systems and E-Commerce
-          applications. Primary commercial experience has been with JavaScript
-          OOP, AngularJs, JQuery, Ajax and JSP although I also have a working
-          knowledge of Java web application frameworks and Flex applications.
+          resolute, versatile, computer science and programming enthusiast. I
+          love writing in multiple coding languages. I've Experience with
+          building high traffic and reliable websites, CMS systems and
+          E-Commerce applications. My primary commercial experience has been
+          with JavaScript OOP, AngularJs, JQuery, Ajax and JSP although I also
+          have a working knowledge of Java web application frameworks and Flex
+          applications.
         </p>
       </div>
-      <h2 style={{ display: "flex", justifyContent: "center" }}>
+      <h2
+        style={{ display: "flex", justifyContent: "center", marginTop: "45px" }}
+      >
         WORK EXPERIENCE
       </h2>
       <div>

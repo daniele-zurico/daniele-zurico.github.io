@@ -19,7 +19,7 @@ const Contacts = () => {
       <div className={styles.container}>
         <p>
           Get in touch with me if you have suggestion about a specific topic or
-          same information are not correct:
+          same information is not correct:
         </p>
         <p className={styles.socialContainer}>
           <FontAwesomeIcon icon={faGithub} className={styles.socialIcon} />
