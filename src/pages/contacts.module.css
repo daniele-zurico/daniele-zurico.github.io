@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  width: 52%;
+}
+
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.socialContainer {
+  margin: 20px auto;
+  font-size: 32px;
+}
+
+.socialIcon {
+  cursor: pointer;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.socialIcon:hover {
+  color: #f53b57;
+}
+
+.link {
+  color: #f53b57;
+  cursor: pointer;
+}
