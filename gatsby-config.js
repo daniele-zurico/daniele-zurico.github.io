@@ -1,11 +1,13 @@
 module.exports = {
   pathPrefix: "/daniele-zurico.github.io",
   siteMetadata: {
+    siteUrl: `https://www.dzurico.com`,
     title: `Share your Knowledge`,
     description: `My personal blog where I share tutorial and stuff I found interesting about Javascript`,
     author: `@Daniele Zurico`,
     lang: "en",
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -58,13 +60,34 @@ module.exports = {
         ],
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-layout",
-    //   options: {
-    //     component: require.resolve(`./src/components/layout.js`),
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-amp`,
+      options: {
+        // analytics: {
+        //   type: "gtag",
+        //   dataCredentials: "include",
+        //   config: {
+        //     vars: {
+        //       gtag_id: "<GA_TRACKING_ID>",
+        //       config: {
+        //         "<GA_TRACKING_ID>": {
+        //           page_location: "{{ pathname }}",
+        //         },
+        //       },
+        //     },
+        //   },
+        // },
+        // canonicalBaseUrl: "http://www.example.com/",
+        // components: ["amp-form"],
+        // excludedPaths: ["/404*", "/"],
+        // pathIdentifier: "/amp/",
+        // relAmpHtmlPattern:
+        //   "{{ canonicalBaseUrl }}{{ pathname }}{{ pathIdentifier }}",
+        // useAmpClientIdApi: true,
+      },
+    },
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-offline",
+    "gatsby-plugin-sitemap",
   ],
 }
