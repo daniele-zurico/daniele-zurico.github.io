@@ -65,6 +65,6 @@ module.exports = {
     //   },
     // },
     "gatsby-plugin-dark-mode",
-    //"gatsby-plugin-offline",
+    "gatsby-plugin-offline",
   ],
 }
