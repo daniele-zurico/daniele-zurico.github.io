@@ -2,7 +2,7 @@
 path: "/blog/how-to-create-smooth-and-stunning-layouts-with-angular-and-bootstrap-4"
 title: "How to Create Smooth and Stunning Layouts with Angular and Bootstrap 4?"
 date: "2019-01-24"
-featuredImage: "../images/2019/01/composite.png"
+featuredImage: "../images/2019/01/composite.jpg"
 ---
 
 Creating smooth and stunning web apps is extremely important in 2019. In one [study](https://digitalmarketinginstitute.com/blog/31-08-16-why-user-experience-is-key-to-digital-marketing-success), researchers found that over 50% of users ignore the website due to the lousy user experience. Another [study](https://www.forbes.com/sites/forbesagencycouncil/2017/03/23/the-bottom-line-why-good-ux-design-means-better-business/) found that responsive design can increase the conversion rate by over 200%.
