@@ -82,4 +82,4 @@ Technologies:
 Reels animations
 Technologies:
 
-- Wowza communication channels
+- Wowza communication channel
