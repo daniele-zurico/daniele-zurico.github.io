@@ -3,6 +3,7 @@ path: "/blog/react-native-and-flow"
 title: "React native and flow"
 date: "2018-07-11"
 featuredImage: "../images/2018/07/flow-react-native.jpg"
+type: "blog"
 ---
 
 One of the things that always fascinating me but I never had the chance to try out is **React Native**. Right now I think is one of the best solution if you want to write a mobile app that works for android and apple without worries to learn swift or objective-c. So I decided to give a try and see how hard is to create something that could work and I've been really surprised on how easy it's. I honestly found a bit complicated to retrieve the right information around the web and sometimes the documentation doesn't help a lot so I decided to write down all the steps I did to have a typed prototype. This tutorial is more for mac users...unfortunately I do not have a window machine with me so I can't help out on that. The requirements to try our mobile app are:

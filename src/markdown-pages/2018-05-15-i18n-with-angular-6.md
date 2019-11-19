@@ -3,6 +3,7 @@ path: "/blog/i18n-with-angular-6"
 title: "i18n with Angular 6+"
 date: "2018-05-15"
 featuredImage: "../images/2018/05/hola.jpg"
+type: "blog"
 ---
 
 I always worked with [ngx-translate](https://github.com/ngx-translate)  a fantastic library that help you a lot to translate your angular applications.

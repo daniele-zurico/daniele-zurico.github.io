@@ -3,6 +3,7 @@ path: "/blog/react-usereducer-hook"
 title: "React - useReducer the new amazing Hook Redux style"
 date: "2019-01-10"
 featuredImage: "../images/2019/01/react-hook.jpg"
+type: "blog"
 ---
 
 Is almost 1 month that I'm using hooks and I can say that they're really cool and they reduce the amount of code without loosing any functionality. My code now is only based on functional component and no class (at the moment) are required. There is one hook that I didn't realise how beautiful and powerful is and this is what I want to show you today:

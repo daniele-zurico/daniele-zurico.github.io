@@ -3,6 +3,7 @@ path: "/blog/react-create-reusable-composable-components"
 title: "React - create reusable composable components"
 date: "2018-10-16"
 featuredImage: "../images/2018/10/react-reusable-component.jpg"
+type: "blog"
 ---
 
 One of the biggest challenge for each developer is to create reusable components trying to hide the complexity for who will use it. Today I'll try to explain how to create an expansion panel:

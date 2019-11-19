@@ -3,6 +3,7 @@ path: "/blog/angular-lazy-load-modules-with-cli"
 title: "Angular - Lazy load modules with cli"
 date: "2018-05-21"
 featuredImage: "../images/2018/05/lazy-load.jpg"
+type: "blog"
 ---
 
 In my previous company we created a project that was built with widgets. A page was just a container with placeholder and in each placeholder there was a configurable widget that could be added or removed based on a json config file. The main challenge was to load these widgets lazily and it was quite hard because cli was not able to do that by default so we end-up hacking the code a little bit creating the same approach of the routing.(https://angular.io/guide/lazy-loading-ngmodules)

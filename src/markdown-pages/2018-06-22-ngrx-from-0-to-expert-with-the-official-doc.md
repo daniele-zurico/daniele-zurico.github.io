@@ -3,6 +3,7 @@ path: "/blog/ngrx-from-0-to-expert-with-the-official-doc"
 title: "ngrx from 0 to expert with the official doc"
 date: "2018-06-22"
 featuredImage: "../images/2018/06/ngrx-platform.png"
+type: "blog"
 ---
 
 When I start to learn something new I use to read the blog from the community and related video from the conferences but I'm always wondering if I'm doing correctly and if I'm following the best practice so this time I decided to follow a different approach and start directly from the official repo [ngrx-platform](https://github.com/ngrx/platform). Surprisedly I found there's a complete [example-app](https://github.com/ngrx/platform/tree/master/example-app) and is quite complex and well done, so I decided to have a look on it. As a good scholar I started copy paste code until I realised that I was missing most of the import things so with a bit of initial frustration I said: **ok let's start from scratch and replicate everything in a pragmatic way**. The step I followed are:

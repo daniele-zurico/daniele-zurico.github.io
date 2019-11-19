@@ -3,6 +3,7 @@ path: "/blog/angular-cli-with-the-super-powers"
 title: "Angular-cli with the super powers"
 date: "2017-02-18"
 featuredImage: "../images/2017/02/CLI-SuperPower.jpg"
+type: "blog"
 ---
 
 Angular-cli has simplified the life of a lot of developers reducing the startup time of a project and giving the ability to focus only on the code without wasting time in configurations.

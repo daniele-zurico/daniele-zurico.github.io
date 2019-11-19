@@ -3,6 +3,7 @@ path: "/blog/angular-animate"
 title: "Angular animations"
 date: "2017-01-18"
 featuredImage: "../images/2017/01/motion.jpg"
+type: "blog"
 ---
 
 Well-designed animations can make a UI not only more fun but also easier to use.

@@ -3,6 +3,7 @@ path: "/blog/angular-or-react-try-both-of-them"
 title: "Angular or React - try both it's worth it"
 date: "2017-01-23"
 featuredImage: "../images/2017/01/react-or-angular.jpg"
+type: "blog"
 ---
 
 I used angular from almost 5 years (1.x and 2.x) but I never tried React and I want to see how it works and I want to have my own idea on which one is better or maybe when I should use one of them.

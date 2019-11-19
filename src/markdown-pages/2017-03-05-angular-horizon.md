@@ -3,6 +3,7 @@ path: "/blog/angular-horizon"
 title: "Angular and Horizon for realtime application"
 date: "2017-03-05"
 featuredImage: "../images/2017/03/angular-horizon-rethinkdb.jpg"
+type: "blog"
 ---
 
 I've always been fascinated by realtime data but at the same time scared about the quantity of code that you need to write to achieve that result:

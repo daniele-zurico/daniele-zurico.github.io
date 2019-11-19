@@ -3,6 +3,7 @@ path: "/blog/angular-aot-webpack-lazy-loading"
 title: "Angular2 AOT with Webpack and Lazy Loading"
 date: "2016-12-04"
 featuredImage: "../images/2016/12/angular2-compiler.jpg"
+type: "blog"
 ---
 
 **@update: Updated the [repo](https://github.com/daniele-zurico/webpack-aot) with webpack 2.2 angular 2.4.3 and ngtools 1.2.3**

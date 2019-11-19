@@ -3,6 +3,7 @@ path: "/blog/how-to-build-your-blog-with-gatsby-and-deploy-to-github-pages-with-
 title: "How to build your blog with Gatsby and deploy to github pages with github actions"
 date: "2019-11-01"
 featuredImage: "../images/2019/11/gatsbyJs.jpg"
+type: "blog"
 ---
 
 After three years of having my blog with WordPress hosted on hostgator.com, I decided that was time to have a change looking around for something cheaper and faster.

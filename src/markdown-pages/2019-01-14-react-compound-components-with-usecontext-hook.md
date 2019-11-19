@@ -3,6 +3,7 @@ path: "/blog/react-compound-components-with-usecontext-hook"
 title: "React - Compound components with useContext Hook"
 date: "2019-01-14"
 featuredImage: "../images/2019/01/context.png"
+type: "blog"
 ---
 
 If you are a React expert I'm pretty sure that you already heard about Compound components.

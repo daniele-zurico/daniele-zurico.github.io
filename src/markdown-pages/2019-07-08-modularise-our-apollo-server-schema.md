@@ -3,6 +3,7 @@ path: "/blog/modularise-our-apollo-server-schema"
 title: "Modularise our Apollo Server schema"
 date: "2019-07-08"
 featuredImage: "../images/2019/07/apollo-module.jpg"
+type: "blog"
 ---
 
 When our schema starts to become long and complex one of the technique we have is schema stitching. Apollo team is working really hard to provide a better way to split our schema into multiple files introducing _Modules_.

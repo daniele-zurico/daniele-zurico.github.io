@@ -7,7 +7,10 @@ import Masonry from "react-masonry-css"
 const Posts = () => {
   const edges = usePosts()
   const postList = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
+    .filter(
+      edge =>
+        !!edge.node.frontmatter.date && edge.node.frontmatter.type === "blog"
+    ) // You can filter your posts based on some criteria
     .map(edge => <Post key={edge.node.id} post={edge.node} />)
 
   const breakpointColumnsObj = {

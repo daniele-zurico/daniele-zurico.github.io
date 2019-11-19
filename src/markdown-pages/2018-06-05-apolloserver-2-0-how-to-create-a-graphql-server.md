@@ -3,6 +3,7 @@ path: "/blog/apollo-server-2-0-auth-with-google-signin"
 title: "ApolloServer 2.0 - how to create a graphQL server"
 date: "2018-06-05"
 featuredImage: "../images/2018/06/apollo-server.png"
+type: "blog"
 ---
 
 It's almost 2 months that I'm working with GraphQL and after a bit of struggling I fallen in 😍love😍. If you never heard about GraphQL I can tell you that it's strongly used by Facebook and, after beeing open-sourced, it has been adopted by other companies like:

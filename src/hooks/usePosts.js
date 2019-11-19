@@ -11,6 +11,7 @@ export function usePosts() {
               date(formatString: "MMMM DD, YYYY")
               path
               title
+              type
               featuredImage {
                 childImageSharp {
                   fluid(maxWidth: 800) {

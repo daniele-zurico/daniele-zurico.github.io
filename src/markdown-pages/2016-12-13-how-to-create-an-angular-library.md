@@ -3,6 +3,7 @@ path: "/blog/how-to-create-an-angular-library"
 title: "How to create an Angular library"
 date: "2016-12-13"
 featuredImage: "../images/2016/12/library-in-angular.jpg"
+type: "blog"
 ---
 
 In the [first](http://www.dzurico.com/angular-aot-webpack-lazy-loading/) post we built our application in AOT mode, now it's time to create a library that is AOT compliant.

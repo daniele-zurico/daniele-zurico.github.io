@@ -3,6 +3,7 @@ path: "/blog/angular-ngrx-with-schematics"
 title: "Angular ngrx with schematics"
 date: "2018-06-19"
 featuredImage: "../images/2018/06/anguar-ngrx.jpg"
+type: "blog"
 ---
 
 I found ngrx one of the really cool things that has been added in the Angular universe and I tried to use it as much as I can from the [really beginning](http://www.dzurico.com/ngrx-store/). The biggest problem I had all the time I started a new project was to set up the envirornment and the boilerplate that I have to copy paste all the time so I ended up to not using it a lot being conscious that is really cool and use-full to use. Yesterday however on twitter I saw the twit from **@ngHouston** about NgRx Schematics with Vitali Borov and despite it's a really great video I got slightly confused so I decided to write down all the step that he did and finalise the StarWars example :)

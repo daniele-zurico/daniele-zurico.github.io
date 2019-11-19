@@ -3,6 +3,7 @@ path: "/blog/ngrx-store"
 title: "NgRx Store - Redux in AngularJs with super powers"
 date: "2016-12-23"
 featuredImage: "../images/2016/12/rxjs.jpg"
+type: "blog"
 ---
 
 I've heard people talk about ngrx/store and Redux for the past 2 months but honestly I was always busy and I didn't have time to experiment it.

@@ -3,6 +3,7 @@ path: "/blog/angular-ngfor-iterate-object-or-maps"
 title: "Angular - ngFor iterate object or Maps"
 date: "2018-07-26"
 featuredImage: "../images/2018/07/forLoop.jpg"
+type: "blog"
 ---
 
 Sometimes you got an object or a maps and you want to iterate it with an ngFor but until today it was impossible to do without implementing your custom pipe or use some nice library. Today angular release a new version 6.1 and looking on the [release notes](https://github.com/angular/angular/blob/master/CHANGELOG.md) I found a nice feature that has been added:

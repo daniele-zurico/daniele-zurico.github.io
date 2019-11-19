@@ -3,6 +3,7 @@ path: "/blog/angular-master-detail-table"
 title: "Angular Master detail table"
 date: "2018-05-28"
 featuredImage: "../images/2018/05/master-detail.png"
+type: "blog"
 ---
 
 In the previous [post](http://www.dzurico.com/generate-a-data-table-library-with-angular-6/) we built a material data table, we have packaged as a library and we have learnt how to publish on npm.

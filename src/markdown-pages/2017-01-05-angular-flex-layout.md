@@ -3,6 +3,7 @@ path: "/blog/angular-flex-layout"
 title: "Angular Flex Layout"
 date: "2017-01-05"
 featuredImage: "../images/2017/01/flexbox.png"
+type: "blog"
 ---
 
 I'm a big fan of Angular Material2 and I have been using it from the alpha version. Unfortunately Material2 didn't have any flex layout system so you needed to use an external one.

@@ -3,6 +3,7 @@ path: "/blog/dockerize-angular-application"
 title: "Dockerize your Angular application"
 date: "2017-01-25"
 featuredImage: "../images/2017/01/maxresdefault.jpg"
+type: "blog"
 ---
 
 **@Update**: this post has been added to [angular-seed wiki](https://github.com/mgechev/angular-seed/wiki)

@@ -3,6 +3,7 @@ path: "/blog/apollo-server-2-0-real-time-data-with-subscriptions"
 title: "Apollo server 2.0 - real time data with subscriptions"
 date: "2018-06-16"
 featuredImage: "../images/2018/06/apollo-stream.jpg"
+type: "blog"
 ---
 
 In the [previous post](http://www.dzurico.com/apollo-server-2-0-auth-with-google-signin/) we set up our server using google-sign-in as identity server and we restricted access to the authenticated users. Today we'll add real-time update thanks to **GraphQL subscriptions**. The scenario we'll implement is quite easy: we want to see in real-time when a new post is added to our list.

@@ -3,6 +3,7 @@ path: "/blog/generate-a-data-table-library-with-angular-6"
 title: "Generate a data table library with angular 6+"
 date: "2018-05-24"
 featuredImage: "../images/2018/05/angular-library.jpg"
+type: "blog"
 ---
 
 One of my first [post](http://www.dzurico.com/how-to-create-an-angular-library/) was about creating a library for angular (note the feature image that shows a most recent library :) ) . It was quite tricky as you had to create a couple of script to make everything working correctly.

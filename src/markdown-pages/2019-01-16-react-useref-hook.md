@@ -3,6 +3,7 @@ path: "/blog/react-useref-hook"
 title: "React - useRef Hook"
 date: "2019-01-16"
 featuredImage: "../images/2019/01/REF.png"
+type: "blog"
 ---
 
 If you already read my previous [post](https://www.dzurico.com/react-usereducer-hook/) we talk about how to create a simple todo with _useState_ and _useReducer_. Today we'll see how we can use **useRef** to refer to our element.
