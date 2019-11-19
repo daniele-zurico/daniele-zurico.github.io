@@ -73,7 +73,8 @@ footer {
 }
 
 a {
-  color: var(--textNormal);
+  /* color: var(--textNormal); */
+  color: #f53b57;
   text-decoration: none;
   font-weight: bold;
 }
