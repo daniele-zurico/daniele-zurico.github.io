@@ -11,6 +11,8 @@ import { graphql, StaticQuery } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faSearch } from "@fortawesome/free-solid-svg-icons"
 const Header = ({ location }) => {
+	const noPicture = location.includes("/blog/")
+
 	let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
 
 	const [darkHeader, setDarkHeader] = React.useState(false)
@@ -61,7 +63,7 @@ const Header = ({ location }) => {
 	}
 
 	return (
-		<header>
+		<header className={styles.headerNoImg}>
 			<div
 				className={styles.fixedHeader}
 				style={{
@@ -123,7 +125,7 @@ const Header = ({ location }) => {
 				</div>
 			</div>
 
-			<FeaturedImage className={styles.image} imageRef={imageRef} />
+			{!noPicture && <FeaturedImage className={styles.image} imageRef={imageRef} />}
 		</header>
 	)
 }

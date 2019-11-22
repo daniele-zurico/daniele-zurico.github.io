@@ -39,10 +39,16 @@ header {
 	text-align: center;
 }
 
-main {
+.main {
 	margin: 0 auto;
 	max-width: 1124px;
 	padding: 0px 1.0875rem 1.45rem;
+	padding-top: 0;
+}
+.noBorder {
+	margin: 0 auto;
+	max-width: 1124px;
+	padding: 0px;
 	padding-top: 0;
 }
 
@@ -102,4 +108,13 @@ a {
 	right: 0;
 	background: #02070b;
 	opacity: 0.95;
+}
+
+pre {
+	border-left: 3px solid #f53b57;
+	margin-left: 5px;
+	padding-left: 5px;
+}
+code {
+	white-space: pre-wrap;
 }

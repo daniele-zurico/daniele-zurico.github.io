@@ -1,7 +1,15 @@
 .sectionContainer {
-  text-align: right;
-  border-right: 4px solid #f53b57;
-  padding: 20px;
-  margin: 10px 0;
-  font-size: 32px;
+	text-align: right;
+	border-right: 4px solid #f53b57;
+	padding: 20px;
+	margin: 10px 0;
+	font-size: 32px;
+}
+
+.leftSectionContainer {
+	text-align: left;
+	border-left: 4px solid #f53b57;
+	padding: 20px;
+	margin: 0;
+	font-size: 32px;
 }

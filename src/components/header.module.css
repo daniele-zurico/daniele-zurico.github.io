@@ -1,3 +1,6 @@
+.headerNoImg {
+	padding: 42px;
+}
 .fixedHeader {
 	padding: 1.45rem 1.0875rem;
 	position: fixed;
