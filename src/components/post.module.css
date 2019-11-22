@@ -18,13 +18,13 @@
 	justify-content: space-between;
 }
 .text {
-	color: #f64747;
+	color: #00bfff;
 }
 .icon {
 	margin-left: 10px;
 	width: 15px;
 	height: 15px;
-	color: #f64747;
+	color: #00bfff;
 	opacity: 0.7;
 	transition: opacity 0.3s;
 }
