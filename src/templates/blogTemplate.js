@@ -7,11 +7,13 @@ import styles from "./blogTemplate.module.css"
 import Social from "../components/social"
 export default function Template({
 	data, // this prop will be injected by the GraphQL query below.
+	location,
 }) {
 	const { markdownRemark } = data // data.markdownRemark holds your post data
 	const { frontmatter, html } = markdownRemark
 	const site = useSite()
 	let post = data.markdownRemark
+	console.log("location:", location)
 	let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
 	return (
 		<>
@@ -23,7 +25,7 @@ export default function Template({
 					<h2 className={styles.date} style={{ marginBottom: 0 }}>
 						{frontmatter.date}
 					</h2>
-					<Social url={post.path} iconClass={styles.iconClass} />
+					<Social url={location.href} iconClass={styles.iconClass} />
 
 					<div className={styles.post} dangerouslySetInnerHTML={{ __html: html }} />
 				</div>

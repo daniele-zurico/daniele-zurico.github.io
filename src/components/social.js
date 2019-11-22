@@ -4,18 +4,19 @@ import { faFacebook, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-sv
 import styles from "./social.module.css"
 import { TwitterShareButton, FacebookShareButton, LinkedinShareButton } from "react-share"
 const Social = ({ url, className, iconClass }) => {
-	const finalUrl = window.location.href.substring(0, window.location.href.length - 1).concat(url)
+	console.log("urrrrrl", url)
+	debugger
 	return (
 		<div className={[styles.container, className].join(" ")}>
-			<FacebookShareButton url={finalUrl}>
+			<FacebookShareButton url={url}>
 				<FontAwesomeIcon icon={faFacebook} className={[styles.icon, iconClass].join(" ")} />
 			</FacebookShareButton>
 
-			<TwitterShareButton url={finalUrl}>
+			<TwitterShareButton url={url}>
 				<FontAwesomeIcon icon={faTwitter} className={[styles.icon, iconClass].join(" ")} />
 			</TwitterShareButton>
 
-			<LinkedinShareButton url={finalUrl}>
+			<LinkedinShareButton url={url}>
 				<FontAwesomeIcon icon={faLinkedinIn} className={[styles.icon, iconClass].join(" ")} />
 			</LinkedinShareButton>
 		</div>
