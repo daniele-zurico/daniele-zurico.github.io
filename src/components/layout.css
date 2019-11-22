@@ -77,3 +77,28 @@ a {
   text-decoration: none;
   font-weight: bold;
 }
+
+.searchContent {
+  position: fixed;
+  z-index: 999999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  opacity: 0.7;
+  overflow: hidden;
+  color: white;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+.searchContent:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #02070b;
+  opacity: 0.95;
+}

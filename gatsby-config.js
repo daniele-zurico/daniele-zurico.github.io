@@ -86,6 +86,22 @@ module.exports = {
         // useAmpClientIdApi: true,
       },
     },
+    {
+      resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+      options: {
+        // Fields to index
+        fields: [`title`, `tags`, `html`],
+        resolvers: {
+          MarkdownRemark: {
+            path: node => node.frontmatter.path,
+            title: node => node.frontmatter.title,
+            date: node => node.frontmatter.date,
+            type: node => node.frontmatter.type,
+            html: node => node.internal.content,
+          },
+        },
+      },
+    },
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-offline",
     "gatsby-plugin-sitemap",

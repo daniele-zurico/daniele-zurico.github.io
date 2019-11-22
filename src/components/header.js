@@ -6,7 +6,10 @@ import styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
 import ToggleDarkLight from "./toggleDarkLight"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
-
+// import Search from "./search"
+import { graphql, StaticQuery } from "gatsby"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faSearch } from "@fortawesome/free-solid-svg-icons"
 const Header = ({ location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
 
@@ -98,20 +101,48 @@ const Header = ({ location }) => {
             <span>Contacts</span>
           </Link>
         </div>
-
-        <div style={{ marginRight: "48px" }}>
-          <ThemeToggler theme="light">
-            {({ theme, toggleTheme }) => {
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <div style={{ marginRight: "20px" }}>
+            <ThemeToggler theme="light">
+              {({ theme, toggleTheme }) => {
+                return (
+                  <ToggleDarkLight
+                    onChange={e =>
+                      toggleTheme(e.target.checked ? "dark" : "light")
+                    }
+                    checked={theme === "dark"}
+                  />
+                )
+              }}
+            </ThemeToggler>
+          </div>
+          <StaticQuery
+            query={graphql`
+              query SearchIndexQuery {
+                siteSearchIndex {
+                  index
+                }
+              }
+            `}
+            render={data => {
               return (
-                <ToggleDarkLight
-                  onChange={e =>
-                    toggleTheme(e.target.checked ? "dark" : "light")
-                  }
-                  checked={theme === "dark"}
-                />
+                <div style={{ fontSize: "20px" }}>
+                  <FontAwesomeIcon
+                    icon={faSearch}
+                    style={{ cursor: "pointer" }}
+                  />
+                </div>
+
+                // <Search searchIndex={data.siteSearchIndex.index} />
               )
             }}
-          </ThemeToggler>
+          />
         </div>
       </div>
 

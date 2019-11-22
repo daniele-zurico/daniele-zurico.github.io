@@ -1,50 +1,48 @@
 .container {
-  position: relative;
+	position: relative;
 }
 .post:hover {
-  box-shadow: 5px 6px 20px var(--boxShadow);
+	box-shadow: 5px 6px 20px var(--boxShadow);
 }
 .post:hover .text {
-  opacity: 1;
-  text-decoration: underline;
+	opacity: 1;
+	text-decoration: underline;
 }
 .post:hover .icon {
-  opacity: 1;
+	opacity: 1;
 }
 
 .footer {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
 }
 .text {
-  color: #f53b57;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+	color: #f53b57;
 }
 .icon {
-  margin-left: 10px;
-  width: 15px;
-  height: 15px;
-  color: #f53b57;
-  opacity: 0.7;
-  transition: opacity 0.3s;
+	margin-left: 10px;
+	width: 15px;
+	height: 15px;
+	color: #f53b57;
+	opacity: 0.7;
+	transition: opacity 0.3s;
 }
 
 .info {
-  background: var(--borderBoxColor);
-  position: relative;
-  margin-top: -12%;
-  padding: 50px 20px 20px;
-  clip-path: polygon(-1% 30px, 101% 0px, 101% 101%, 0 101%);
-  cursor: pointer;
+	background: var(--borderBoxColor);
+	position: relative;
+	margin-top: -12%;
+	padding: 50px 20px 20px;
+	clip-path: polygon(-1% 30px, 101% 0px, 101% 101%, 0 101%);
+	cursor: pointer;
 }
 
 .title {
-  font-size: 22px;
+	font-size: 22px;
 }
 
 .titleContainer {
-  border-left: 5px solid rgba(245, 59, 87, 1);
-  padding-left: 10px;
+	border-left: 5px solid rgba(245, 59, 87, 1);
+	padding-left: 10px;
 }
