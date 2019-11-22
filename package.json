@@ -30,6 +30,7 @@
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
     "react-masonry-css": "^1.0.14",
+    "react-share": "^3.0.1",
     "react-spring": "^8.0.27",
     "typeface-nunito-sans": "^0.0.72"
   },
