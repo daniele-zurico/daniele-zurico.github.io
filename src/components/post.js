@@ -7,41 +7,38 @@ import Social from "./social"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 const Post = ({
-	post: {
-		frontmatter: {
-			path,
-			date,
-			title,
-			featuredImage: {
-				childImageSharp: { fluid },
-			},
-		},
-	},
-	location,
-}) => {
-	console.log("yoooo,", location)
-	return (
-		<div>
-			<Link to={path} className={styles.container}>
-				<div className={styles.post}>
-					<DateDisplay date={date} />
-					<Img fluid={fluid} />
-					<div className={styles.info}>
-						<div className={styles.titleContainer}>
-							<span className={styles.title}>{title}</span>
-						</div>
-						<div className={styles.footer}>
-							<Social url={path} />
-							<div>
-								<span className={styles.text}>Read more</span>
-								<FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
-							</div>
-						</div>
-					</div>
-				</div>
-			</Link>
-		</div>
-	)
-}
+  post: {
+    frontmatter: {
+      path,
+      date,
+      title,
+      featuredImage: {
+        childImageSharp: { fluid },
+      },
+    },
+  },
+  location,
+}) => (
+  <div>
+    <Link to={path} className={styles.container}>
+      <div className={styles.post}>
+        <DateDisplay date={date} />
+        <Img fluid={fluid} />
+        <div className={styles.info}>
+          <div className={styles.titleContainer}>
+            <span className={styles.title}>{title}</span>
+          </div>
+          <div className={styles.footer}>
+            <Social url={location.href + path.substring(1)} />
+            <div>
+              <span className={styles.text}>Read more</span>
+              <FontAwesomeIcon icon={faArrowRight} className={styles.icon} />
+            </div>
+          </div>
+        </div>
+      </div>
+    </Link>
+  </div>
+)
 
 export default Post

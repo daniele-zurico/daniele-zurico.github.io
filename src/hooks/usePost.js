@@ -19,6 +19,5 @@ export function usePost() {
       }
     }
   `)
-  console.log("useHook", data)
   return markdownRemark
 }
