@@ -1,8 +1,12 @@
 import { graphql, useStaticQuery } from "gatsby"
 export function usePosts() {
   const { allMarkdownRemark } = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    query blogListQuery($skip: Int!, $limit: Int!) {
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: $limit
+        skip: $skip
+      ) {
         edges {
           node {
             id
