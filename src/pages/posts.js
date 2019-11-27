@@ -2,14 +2,14 @@ import React from "react"
 import { SectionTitle, Post } from "../components"
 import styles from "./posts.module.css"
 // import { usePosts } from "../hooks/usePosts"
-import { graphql, useStaticQuery } from "gatsby"
+import { graphql } from "gatsby"
 
 import Masonry from "react-masonry-css"
 
-const Posts = ({ allMarkdownRemark, location }) => {
+const Posts = ({ data, location }) => {
   // const edges = usePosts()
 
-  const postList = allMarkdownRemark.edges
+  const postList = data.allMarkdownRemark.edges
     .filter(
       edge =>
         !!edge.node.frontmatter.date && edge.node.frontmatter.type === "blog"
@@ -37,7 +37,7 @@ const Posts = ({ allMarkdownRemark, location }) => {
   )
 }
 
-export const blogListQuery = useStaticQuery(graphql`
+export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
     allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
@@ -65,6 +65,6 @@ export const blogListQuery = useStaticQuery(graphql`
       }
     }
   }
-`)
+`
 
 export default Posts
