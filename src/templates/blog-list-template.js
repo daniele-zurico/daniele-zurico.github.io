@@ -5,9 +5,10 @@ import styles from "./blog-list.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import Masonry from "react-masonry-css"
-
+import { useSite } from "../hooks/useSite"
+import { SEO } from "../components"
 const BlogList = ({ data, location, pageContext }) => {
-  console.log(pageContext)
+  const site = useSite()
   const { currentPage, numPages } = pageContext
   const edges = data.allMarkdownRemark.edges
   const postList = edges
@@ -30,6 +31,7 @@ const BlogList = ({ data, location, pageContext }) => {
 
   return (
     <>
+      <SEO title="Home" site={site} />
       <SectionTitle title="Posts" />
       <Masonry
         breakpointCols={breakpointColumnsObj}
