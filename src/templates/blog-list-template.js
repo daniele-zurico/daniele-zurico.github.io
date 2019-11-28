@@ -2,7 +2,8 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { SectionTitle, Post } from "../components"
 import styles from "./blog-list.module.css"
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import Masonry from "react-masonry-css"
 
 const BlogList = ({ data, location, pageContext }) => {
@@ -14,10 +15,12 @@ const BlogList = ({ data, location, pageContext }) => {
     .map(edge => (
       <Post key={edge.node.id} post={edge.node} location={location} />
     ))
+
   const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
-  const nextPage = (currentPage + 1).toString()
+  const isLast = numPages === currentPage
+  const prevPage =
+    currentPage === 2 ? "/" : `/blog/${(currentPage - 1).toString()}`
+  const nextPage = `/blog/${currentPage + 1}`
 
   const breakpointColumnsObj = {
     default: 3,
@@ -35,16 +38,18 @@ const BlogList = ({ data, location, pageContext }) => {
       >
         {postList}
       </Masonry>
-      {!isFirst && (
-        <Link to={`/blog/${prevPage}`} rel="prev">
-          ← Previous Page
-        </Link>
-      )}
-      {!isLast && (
-        <Link to={`/blog/${nextPage}`} rel="next">
-          Next Page →
-        </Link>
-      )}
+      <div className={styles.navigateContainer}>
+        {!isFirst && (
+          <Link to={prevPage} rel="prev" className={styles.navigate}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </Link>
+        )}
+        {!isLast && (
+          <Link to={nextPage} rel="next" className={styles.navigate}>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </Link>
+        )}
+      </div>
     </>
   )
 }

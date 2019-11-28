@@ -22,3 +22,29 @@
   background: grey;
   margin-bottom: 30px;
 }
+
+.navigateContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.navigate {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #172027;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-right: 20px;
+  color: #00bfff;
+  font-weight: bold;
+  font-size: 37px;
+  transition: background-color 0.3s ease;
+}
+
+.navigate:hover {
+  background-color: #172028;
+}
