@@ -20,8 +20,8 @@ const BlogList = ({ data, location, pageContext }) => {
   const isFirst = currentPage === 1
   const isLast = numPages === currentPage
   const prevPage =
-    currentPage === 2 ? "/" : `/blog/${(currentPage - 1).toString()}`
-  const nextPage = `/blog/${currentPage + 1}`
+    currentPage === 2 ? "/" : `/page/${(currentPage - 1).toString()}`
+  const nextPage = `/page/${currentPage + 1}`
 
   const breakpointColumnsObj = {
     default: 3,
