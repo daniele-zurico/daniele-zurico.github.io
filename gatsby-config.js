@@ -83,7 +83,7 @@ module.exports = {
             },
           },
         },
-        canonicalBaseUrl: "http://www.dzurico.com/",
+        canonicalBaseUrl: "https://www.dzurico.com/",
         components: ["amp-form"],
         excludedPaths: ["/404*", "/"],
         pathIdentifier: "/amp/",
