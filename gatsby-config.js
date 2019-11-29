@@ -69,27 +69,27 @@ module.exports = {
     {
       resolve: `gatsby-plugin-amp`,
       options: {
-        // analytics: {
-        //   type: "gtag",
-        //   dataCredentials: "include",
-        //   config: {
-        //     vars: {
-        //       gtag_id: "<GA_TRACKING_ID>",
-        //       config: {
-        //         "<GA_TRACKING_ID>": {
-        //           page_location: "{{ pathname }}",
-        //         },
-        //       },
-        //     },
-        //   },
-        // },
-        // canonicalBaseUrl: "http://www.example.com/",
-        // components: ["amp-form"],
-        // excludedPaths: ["/404*", "/"],
-        // pathIdentifier: "/amp/",
-        // relAmpHtmlPattern:
-        //   "{{ canonicalBaseUrl }}{{ pathname }}{{ pathIdentifier }}",
-        // useAmpClientIdApi: true,
+        analytics: {
+          type: "gtag",
+          dataCredentials: "include",
+          config: {
+            vars: {
+              gtag_id: "37192867",
+              config: {
+                "37192867": {
+                  page_location: "{{ pathname }}",
+                },
+              },
+            },
+          },
+        },
+        canonicalBaseUrl: "http://www.dzurico.com/",
+        components: ["amp-form"],
+        excludedPaths: ["/404*", "/"],
+        pathIdentifier: "/amp/",
+        relAmpHtmlPattern:
+          "{{ canonicalBaseUrl }}{{ pathname }}{{ pathIdentifier }}",
+        useAmpClientIdApi: true,
       },
     },
     {
