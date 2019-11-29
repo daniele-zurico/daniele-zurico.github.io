@@ -105,7 +105,7 @@ const Header = ({ isBlogPage, location }) => {
             alignItems: "center",
           }}
         >
-          <div style={{ marginRight: "20px" }}>
+          <div className={styles.togglerContainer}>
             <ThemeToggler theme="light">
               {({ theme, toggleTheme }) => {
                 return (

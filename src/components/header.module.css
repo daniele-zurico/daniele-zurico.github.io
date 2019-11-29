@@ -51,3 +51,11 @@
   width: 38px;
   left: 40px;
 }
+
+.togglerContainer {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
