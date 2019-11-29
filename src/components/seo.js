@@ -7,7 +7,7 @@
 
 import React from "react"
 import Helmet from "react-helmet"
-
+import favicon from "../images/favIcon/favicon.ico"
 const SEO = ({ site: { description, author, lang }, title }) => (
   <Helmet
     htmlAttributes={{
@@ -15,6 +15,7 @@ const SEO = ({ site: { description, author, lang }, title }) => (
     }}
     title={title}
     titleTemplate={`%s | ${title}`}
+    link={[{ rel: "shortcut icon", type: "image/x-icon", href: `${favicon}` }]}
     meta={[
       {
         name: `description`,

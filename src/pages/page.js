@@ -3,7 +3,7 @@ import { SEO } from "../components"
 
 import { useSite } from "../hooks/useSite"
 
-const IndexPage = ({ location }) => {
+const IndexPage = () => {
   const site = useSite()
   return <SEO title="Home" site={site} />
 }
