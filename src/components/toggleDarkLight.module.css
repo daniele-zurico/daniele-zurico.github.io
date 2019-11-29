@@ -1,6 +1,6 @@
 .switch {
   position: relative;
-  zoom: 0.3;
+  transform: scale(0.3);
 }
 .switch input {
   height: 100%;
