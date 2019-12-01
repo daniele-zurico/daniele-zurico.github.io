@@ -7,6 +7,7 @@ import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import Masonry from "react-masonry-css"
 import { useSite } from "../hooks/useSite"
 import { SEO } from "../components"
+import headerImage from "../images/head.jpeg"
 const BlogList = ({ data, location, pageContext }) => {
   const site = useSite()
   const { currentPage, numPages } = pageContext
@@ -31,7 +32,7 @@ const BlogList = ({ data, location, pageContext }) => {
 
   return (
     <>
-      <SEO title="Home" site={site} />
+      <SEO title="Home" site={site} featuredImage={headerImage} />
       <SectionTitle title="Posts" />
       <Masonry
         breakpointCols={breakpointColumnsObj}
