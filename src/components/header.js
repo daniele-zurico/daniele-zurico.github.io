@@ -13,7 +13,11 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 const Header = ({ isBlogPage, location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
   console.log(location)
-  const noHeader = location && location.includes("/blog/")
+  const [noHeader, setNoHeader] = React.useState(false)
+
+  React.useEffect(() => {
+    setNoHeader(location && location.includes("/blog/"))
+  }, [location])
   const [darkHeader, setDarkHeader] = React.useState(false)
   const imageRef = React.useRef()
 
