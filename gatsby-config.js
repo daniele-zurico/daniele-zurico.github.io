@@ -89,6 +89,7 @@ module.exports = {
         trackingId: "UA-37192867-2",
       },
     },
+    "gatsby-plugin-robots-txt",
     "gatsby-plugin-dark-mode",
     "gatsby-plugin-offline",
     "gatsby-plugin-sitemap",
