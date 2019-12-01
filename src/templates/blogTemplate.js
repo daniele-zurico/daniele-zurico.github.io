@@ -17,7 +17,7 @@ export default function Template({
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <>
-      <SEO title="About me" site={site} />
+      <SEO title={frontmatter.title} site={site} />
       <div>
         <Img fluid={featuredImgFluid} />
         <SectionTitle title={frontmatter.title} left={true} />
