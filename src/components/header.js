@@ -12,7 +12,6 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 // import { faSearch } from "@fortawesome/free-solid-svg-icons"
 const Header = ({ isBlogPage, location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
-  console.log(location)
   const [noHeader, setNoHeader] = React.useState(false)
 
   React.useEffect(() => {
