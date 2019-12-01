@@ -42,12 +42,22 @@ const BlogList = ({ data, location, pageContext }) => {
       </Masonry>
       <div className={styles.navigateContainer}>
         {!isFirst && (
-          <Link to={prevPage} rel="prev" className={styles.navigate}>
+          <Link
+            to={prevPage}
+            rel="prev"
+            aria-label="previous page"
+            className={styles.navigate}
+          >
             <FontAwesomeIcon icon={faAngleLeft} />
           </Link>
         )}
         {!isLast && (
-          <Link to={nextPage} rel="next" className={styles.navigate}>
+          <Link
+            to={nextPage}
+            rel="next"
+            aria-label="next page"
+            className={styles.navigate}
+          >
             <FontAwesomeIcon icon={faAngleRight} />
           </Link>
         )}
