@@ -12,7 +12,8 @@ import { useScrollPosition } from "@n8tb1t/use-scroll-position"
 // import { faSearch } from "@fortawesome/free-solid-svg-icons"
 const Header = ({ isBlogPage, location }) => {
   let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
-
+  console.log(location)
+  const noHeader = location && location.includes("/blog/")
   const [darkHeader, setDarkHeader] = React.useState(false)
   const imageRef = React.useRef()
 
@@ -64,7 +65,7 @@ const Header = ({ isBlogPage, location }) => {
   }
 
   return (
-    <header className={isBlogPage ? styles.headerNoImg : null}>
+    <header className={noHeader ? styles.headerNoImg : null}>
       <div
         className={styles.fixedHeader}
         style={{
