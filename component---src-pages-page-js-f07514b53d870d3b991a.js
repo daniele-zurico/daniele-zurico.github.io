@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgatsby_starter_default=self.webpackChunkgatsby_starter_default||[]).push([[624],{8067:function(t,e,a){a.d(e,{W:function(){return u}});var r=a(1082);function u(){return(0,r.useStaticQuery)("3206378567").site.siteMetadata}},5004:function(t,e,a){a.r(e);var r=a(7294),u=a(554),n=a(8067);e.default=function(){var t=(0,n.W)();return r.createElement(u.Fb,{title:"Home",site:t})}}}]);
+//# sourceMappingURL=component---src-pages-page-js-f07514b53d870d3b991a.js.map
