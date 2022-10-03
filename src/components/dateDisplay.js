@@ -1,5 +1,5 @@
 import React from "react"
-import styles from "./dateDisplay.module.css"
+import * as styles from "./dateDisplay.module.css"
 
 const DateDisplay = ({ date }) => {
   const splittedDate = date.split(/[\s,]+/)

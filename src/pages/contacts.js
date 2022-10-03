@@ -1,8 +1,8 @@
 import React from "react"
-import { SEO, SectionTitle } from "../components"
+import { Head, SectionTitle } from "../components"
 import { useSite } from "../hooks/useSite"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import styles from "./contacts.module.css"
+import * as styles from "./contacts.module.css"
 import {
   faFacebook,
   faTwitter,
@@ -14,7 +14,7 @@ const Contacts = () => {
   const site = useSite()
   return (
     <>
-      <SEO title="Contacts" site={site} />
+      <Head title="Contacts" site={site}/>
       <SectionTitle title="Contacts" />
       <div className={styles.container}>
         <p>

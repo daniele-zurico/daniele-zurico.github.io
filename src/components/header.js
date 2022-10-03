@@ -1,18 +1,17 @@
 import { Link } from "gatsby"
 import React from "react"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
+//import useDarkMode from 'use-dark-mode';
 import { useSpring, animated } from "react-spring"
-import styles from "./header.module.css"
+import * as styles from "./header.module.css"
 import FeaturedImage from "./featuredImage"
-import ToggleDarkLight from "./toggleDarkLight"
+// import ToggleDarkLight from "./toggleDarkLight"
 import { useScrollPosition } from "@n8tb1t/use-scroll-position"
-// import Search from "./search"
-// import { graphql, StaticQuery } from "gatsby"
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faSearch } from "@fortawesome/free-solid-svg-icons"
+
 const Header = ({ isBlogPage, location }) => {
-  let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 })
-  const [noHeader, setNoHeader] = React.useState(false)
+  let [el, setEl] = React.useState({ offsetWidth: 0, offsetLeft: 0 });
+  const [noHeader, setNoHeader] = React.useState(false);
+
+  //const darkMode = useDarkMode(false);
 
   React.useEffect(() => {
     setNoHeader(location && location.includes("/blog/"))
@@ -109,41 +108,12 @@ const Header = ({ isBlogPage, location }) => {
             alignItems: "center",
           }}
         >
-          <div className={styles.togglerContainer}>
-            <ThemeToggler theme="light">
-              {({ theme, toggleTheme }) => {
-                return (
-                  <ToggleDarkLight
-                    onChange={e =>
-                      toggleTheme(e.target.checked ? "dark" : "light")
-                    }
-                    checked={theme === "dark"}
-                  />
-                )
-              }}
-            </ThemeToggler>
-          </div>
-          {/* <StaticQuery
-            query={graphql`
-              query SearchIndexQuery {
-                siteSearchIndex {
-                  index
-                }
-              }
-            `}
-            render={data => {
-              return (
-                <div style={{ fontSize: "20px" }}>
-                  <FontAwesomeIcon
-                    icon={faSearch}
-                    style={{ cursor: "pointer" }}
-                  />
-                </div>
-
-                // <Search searchIndex={data.siteSearchIndex.index} />
-              )
-            }}
-          /> */}
+          {/* <div className={styles.togglerContainer}>
+            <ToggleDarkLight
+              onChange={darkMode.toggle}
+              checked={darkMode.enable}
+            />
+          </div> */}
         </div>
       </div>
 

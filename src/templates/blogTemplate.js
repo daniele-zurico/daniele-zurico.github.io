@@ -1,9 +1,8 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import { SEO, SectionTitle } from "../components"
+import { Head, SectionTitle } from "../components"
 import { useSite } from "../hooks/useSite"
-import styles from "./blogTemplate.module.css"
+import * as styles from "./blogTemplate.module.css"
 import Social from "../components/social"
 
 export default function Template({
@@ -17,13 +16,13 @@ export default function Template({
   let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
   return (
     <>
-      <SEO
+      <Head
         title={frontmatter.title}
         site={site}
         featuredImage={featuredImgFluid.src}
       />
       <div>
-        <Img fluid={featuredImgFluid} />
+      <img srcSet={featuredImgFluid.srcSet} width="100%" alt={featuredImgFluid.srcSet} />
         <SectionTitle title={frontmatter.title} left={true} />
         <div className={styles.content}>
           <h2 className={styles.date} style={{ marginBottom: 0 }}>

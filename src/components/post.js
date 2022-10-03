@@ -1,7 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import Img from "gatsby-image"
-import styles from "./post.module.css"
+import * as styles from "./post.module.css"
 import DateDisplay from "./dateDisplay"
 import Social from "./social"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -23,7 +22,7 @@ const Post = ({
     <Link to={path} className={styles.container}>
       <div className={styles.post}>
         <DateDisplay date={date} />
-        <Img fluid={fluid} />
+        <img srcSet={fluid.srcSet} width="100%" alt={fluid.srcSet} />
         <div className={styles.info}>
           <div className={styles.titleContainer}>
             <span className={styles.title}>{title}</span>

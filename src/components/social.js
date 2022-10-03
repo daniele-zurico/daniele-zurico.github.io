@@ -1,7 +1,7 @@
 import React from "react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFacebook, faTwitter, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
-import styles from "./social.module.css"
+import * as styles from "./social.module.css"
 import { TwitterShareButton, FacebookShareButton, LinkedinShareButton } from "react-share"
 const Social = ({ url, className, iconClass }) => (
 	<div className={[styles.container, className].join(" ")}>

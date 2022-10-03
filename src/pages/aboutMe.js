@@ -1,7 +1,7 @@
 import React from "react"
-import { SEO, SectionTitle } from "../components"
+import { Head, SectionTitle } from "../components"
 import { useSite } from "../hooks/useSite"
-import styles from "./aboutMe.module.css"
+import * as styles from "./aboutMe.module.css"
 import imgBS from "../images/blackSwan.png"
 import { Link } from "gatsby"
 
@@ -9,8 +9,8 @@ const AboutMe = () => {
   const site = useSite()
   return (
     <>
-      <SEO title="About me" site={site} />
-      <SectionTitle title="About Me" />
+      <Head title="About me" site={site} />
+      <SectionTitle title="About Me" featuredImage=''  />
       <div>
         <p>
           <span>HI</span>,

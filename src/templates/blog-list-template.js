@@ -1,12 +1,12 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { SectionTitle, Post } from "../components"
-import styles from "./blog-list.module.css"
+import * as styles from "./blog-list.module.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons"
 import Masonry from "react-masonry-css"
 import { useSite } from "../hooks/useSite"
-import { SEO } from "../components"
+import { Head } from "../components"
 import headerImage from "../images/head.jpeg"
 const BlogList = ({ data, location, pageContext }) => {
   const site = useSite()
@@ -32,7 +32,7 @@ const BlogList = ({ data, location, pageContext }) => {
 
   return (
     <>
-      <SEO title="Home" site={site} featuredImage={headerImage} />
+      <Head title="Home" site={site} featuredImage={headerImage} />
       <SectionTitle title="Posts" />
       <Masonry
         breakpointCols={breakpointColumnsObj}

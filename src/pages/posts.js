@@ -1,6 +1,6 @@
 import React from "react"
 import { SectionTitle, Post } from "../components"
-import styles from "./posts.module.css"
+import * as styles from "./posts.module.css"
 import { usePosts } from "../hooks/usePosts"
 import Masonry from "react-masonry-css"
 

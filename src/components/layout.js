@@ -14,7 +14,7 @@ const Layout = ({ children, location }) => {
   const isBlogPage = location.href && location.href.includes("/blog/")
   return (
     <div>
-      <Header location={location.href} isBlogPage={isBlogPage} />
+      <Header location={location.href} isBlogPage={isBlogPage}/>
       <main className={isBlogPage ? "noBorder" : "main"}>{children}</main>
       <footer>
         <svg

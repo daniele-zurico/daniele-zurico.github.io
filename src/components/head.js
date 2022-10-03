@@ -6,12 +6,13 @@
  */
 
 import React from "react"
-import Helmet from "react-helmet"
+
 import favicon from "../images/favIcon/favicon.ico"
-const SEO = ({ site: { description, author, lang }, title, featuredImage }) => {
+const Head = ({ site: { description, author, lang }, title, featuredImage }) => {
+  console.log("AH BELLO")
   console.log(featuredImage)
   return (
-    <Helmet
+    <div
       htmlAttributes={{
         lang,
       }}
@@ -29,10 +30,7 @@ const SEO = ({ site: { description, author, lang }, title, featuredImage }) => {
           property: `og:title`,
           content: title,
         },
-        {
-          property: `og:image`,
-          content: featuredImage,
-        },
+
         {
           property: `og:description`,
           content: description,
@@ -40,6 +38,10 @@ const SEO = ({ site: { description, author, lang }, title, featuredImage }) => {
         {
           property: `og:type`,
           content: `website`,
+        },
+        {
+          property: `og:image`,
+          content: featuredImage,
         },
         {
           name: `twitter:card`,
@@ -62,4 +64,4 @@ const SEO = ({ site: { description, author, lang }, title, featuredImage }) => {
   )
 }
 
-export default SEO
+export default Head
