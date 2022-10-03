@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.dzurico.com/sitemap.xml
+Sitemap: https://www.dzurico.com/daniele-zurico.github.io/sitemap/sitemap-index.xml
 Host: https://www.dzurico.com
