@@ -114,5 +114,4 @@ Almost all the serverless cloud providers offer the same features, and functiona
 We hope you find this post useful. It would be great for us if you share this post on Facebook or Twitter to reach more audiences. Feel free to mention your queries in the comment box given below and we will get back to you soon.
 
 Thank you!
-
 _Author:_ Michael Smith
