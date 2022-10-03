@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-0c7c1487d39178635fd0.js"
+    "url": "webpack-runtime-a50270034a0382a9545a.js"
   },
   {
     "url": "styles.b5cf184ebe254fb0d6fc.css"
@@ -39,14 +39,18 @@ self.__precacheManifest = [
     "url": "commons-ac34fbf21e371b141caf.js"
   },
   {
-    "url": "app-f3629c37d1b84473acbd.js"
+    "url": "app-709d005fa9cb06ca55e0.js"
   },
   {
     "url": "component---node-modules-gatsby-plugin-offline-app-shell-js-a7388efdc62430243a75.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "25977f3143d17f6ccd3bd7080782c832"
+    "revision": "3a3629261ae7195f4af21f474df7cba1"
+  },
+  {
+    "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
+    "revision": "d274adf0f008ef152ce70a312b04b730"
   },
   {
     "url": "manifest.webmanifest",
@@ -73,12 +77,12 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   }
 
   let { pathname } = new URL(event.request.url)
-  pathname = pathname.replace(new RegExp(`^`), ``)
+  pathname = pathname.replace(new RegExp(`^/daniele-zurico.github.io`), ``)
 
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/app-f3629c37d1b84473acbd.js`))) {
+  if (!resources || !(await caches.match(`/daniele-zurico.github.io/app-709d005fa9cb06ca55e0.js`))) {
     return await fetch(event.request)
   }
 
@@ -91,7 +95,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
     }
   }
 
-  const offlineShell = `/offline-plugin-app-shell-fallback/index.html`
+  const offlineShell = `/daniele-zurico.github.io/offline-plugin-app-shell-fallback/index.html`
   const offlineShellWithKey = workbox.precaching.getCacheKeyForURL(offlineShell)
   return await caches.match(offlineShellWithKey)
 })
